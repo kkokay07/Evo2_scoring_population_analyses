@@ -1,4 +1,4 @@
-# Evo2 SNP Scoring Pipeline — Landscape Genomics Candidate Genes in Jharkhand Chicken (*Gallus gallus*)
+# Evo2 SNP Scoring Pipeline - landscape Genomics Candidate Genes in Jharkhand Chicken (*Gallus gallus*)
 
 Scoring of **536 biallelic SNPs** (within 72 landscape-genomics enriched genes) with the
 **Evo2 7B** DNA foundation model, using 1 kb reference/alternate allele sequences, and
@@ -6,7 +6,7 @@ downstream analysis of **delta log-likelihood (delta LL)**, perplexity, SNP alle
 probability, per-individual functional burden, and population differentiation across
 four chicken populations (JM, JR, MA, RW).
 
-**Author:** Kanaka KK
+**Author:** (Kanaka KK)[https://scholar.google.com/citations?user=0dQ7Sf8AAAAJ&hl=en]
 
 ---
 
@@ -33,29 +33,6 @@ delta_LL = LL_ref - LL_alt
 - **delta_LL < 0** → alternate allele preferred (alt putatively beneficial)
 - **|delta_LL|** → strength of functional impact
 
-## Repository Structure
-
-```
-evo2_snp_scoring/
-├── README.md
-├── scripts/
-│   ├── extract_evo2_scores.py        # Evo2 7B scoring of 1 kb ref/alt FASTA → .npz
-│   ├── evo2_analysis.py              # delta LL analysis, 2 populations (JM, JR)
-│   ├── evo2_analysis_all_pops.py     # delta LL analysis, all 4 populations
-│   └── joint_population_analysis.py  # per-individual burden, SNP-level ANOVA, PCA
-├── data/
-│   ├── snps_ref_1kb.fa / snps_alt_1kb.fa           # 536 + 536 sequences (SNP centred)
-│   ├── snps_ref_1kb_evo2_scores.npz                # Evo2 scores (ref alleles)
-│   ├── snps_alt_1kb_evo2_scores.npz                # Evo2 scores (alt alleles)
-│   ├── snps_in_genes.tsv                           # 651 genic SNPs before biallelic filter
-│   ├── snp_gene_map_536.txt                        # final 536 SNP → gene map
-│   ├── gene_coords.tsv / all_unique_genes.txt      # 94 mapped candidate gene coordinates
-│   ├── *.keep                                      # per-population sample keep-lists
-│   ├── *_freq.frq                                  # PLINK --freq output per population
-│   └── ch_gmmlm_genes_only.{bed,bim,fam,raw}       # PLINK genotype data (536 SNPs, 84 ind.)
-├── results/                     # score tables, burden/ANOVA results, manuscript text
-└── figures/                     # all analysis plots
-```
 
 ## Step-wise Implementation
 
@@ -168,8 +145,8 @@ populations is correlated with |delta_LL|; PCA is performed on the 536-SNP genot
 ## Citation
 
 If you use this pipeline, please cite Evo2 (Arc Institute, 2024) and PLINK
-(Purcell et al., 2007), and credit **Kanaka KK**.
+(Purcell et al., 2007), and credit **(Kanaka KK)[https://scholar.google.com/citations?user=0dQ7Sf8AAAAJ&hl=en]**.
 
 ## License
 
-MIT (unless specified otherwise by the author).
+MIT.
