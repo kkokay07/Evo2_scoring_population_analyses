@@ -47,8 +47,7 @@ delta_LL = LL_ref - LL_alt
   `biopython`, `tqdm`.
 - **PLINK v1.9** for allele frequencies (`--freq --allow-extra-chr`) and genotype
   recoding (`--recode A`).
-- **Reference genome**: *G. gallus* GRCg6a (`GCF_000002315.6`), FASTA + GTF from NCBI,
-  indexed with `samtools faidx`.
+- **Reference genome**: Gallus_gallus-4.0 (GCF_000002315.3)
 - **Note on environment**: a PyTorch/Transformer Engine version conflict was resolved by
   sanitizing `sys.path` (removing `~/.local`) and restoring the conda
   `transformer-engine-torch` shared libraries — this is already handled at the top of
