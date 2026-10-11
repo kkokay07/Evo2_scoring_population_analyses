@@ -89,10 +89,10 @@ perplexity, and SNP allele probability to `.npz`.
 ### Step 4 — Population allele frequencies (PLINK)
 
 ```bash
-plink --bfile ch_gmmlm --keep jm.keep --freq --allow-extra-chr --out jm_freq
-plink --bfile ch_gmmlm --keep jr.keep --freq --allow-extra-chr --out jr_freq
-plink --bfile ch_gmmlm --keep ma.keep --freq --allow-extra-chr --out ma_freq
-plink --bfile ch_gmmlm --keep rw.keep --freq --allow-extra-chr --out rw_freq
+plink --bfile bfile_name --keep jm.keep --freq --allow-extra-chr --out jm_freq
+plink --bfile bfile_name --keep jr.keep --freq --allow-extra-chr --out jr_freq
+plink --bfile bfile_name --keep ma.keep --freq --allow-extra-chr --out ma_freq
+plink --bfile bfile_name --keep rw.keep --freq --allow-extra-chr --out rw_freq
 ```
 
 ### Step 5 — Delta LL analysis
@@ -133,13 +133,7 @@ populations is correlated with |delta_LL|; PCA is performed on the 536-SNP genot
 - `results/evo2_gene_level_stats*.csv` — per-gene aggregated effects
 - `results/evo2_individual_burden.csv` — per-individual burden scores (84 individuals)
 - `results/evo2_snp_population_anova.csv` — per-SNP population-differentiation ANOVA
-- `results/evo2_manuscript_methods_results_discussion.txt` — full Methods/Results/Discussion write-up
-- `figures/` — variant effect, population MAF, joint population analysis plots
 
-## Data Provenance
-
-- 84 Jharkhand chickens: JM (n=15), JR (n=26), MA (n=27), RW (n=16); 52,629 genome-wide SNPs (GRCg6a).
-- Reference: NCBI Assembly GCF_000002315.6 (GRCg6a), RefSeq annotation release 104.
 
 ## Citation
 
