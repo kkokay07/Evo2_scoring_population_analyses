@@ -6,7 +6,7 @@ downstream analysis of **delta log-likelihood (delta LL)**, perplexity, SNP alle
 probability, per-individual functional burden, and population differentiation across
 four chicken populations (JM, JR, MA, RW).
 
-**Author:** (Kanaka KK)[https://scholar.google.com/citations?user=0dQ7Sf8AAAAJ&hl=en]
+**Author:** [Kanaka KK](https://scholar.google.com/citations?user=0dQ7Sf8AAAAJ&hl=en)
 
 ---
 
@@ -145,7 +145,7 @@ populations is correlated with |delta_LL|; PCA is performed on the 536-SNP genot
 ## Citation
 
 If you use this pipeline, please cite Evo2 (Arc Institute, 2024) and PLINK
-(Purcell et al., 2007), and credit **(Kanaka KK)[https://scholar.google.com/citations?user=0dQ7Sf8AAAAJ&hl=en]**.
+(Purcell et al., 2007), and credit **[Kanaka KK](https://scholar.google.com/citations?user=0dQ7Sf8AAAAJ&hl=en)**.
 
 ## License
 
